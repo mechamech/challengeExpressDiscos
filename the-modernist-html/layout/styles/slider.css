@@ -1,15 +1,12 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
-
-/* ---------------------------------Slider----------------------------------------- */
-
 @charset "utf-8";
+/*
+Template Name: The Modernist
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+File: Slider CSS
+*/
 
 #slider{display:block; position:relative; width:860px; height:430px; margin:0 auto; padding:0 50px 40px 50px; overflow:hidden; line-height:1.6em;}
 #slider::after{display:block; visibility:hidden; height:0; clear:both; content:"";}
@@ -40,6 +37,13 @@ a {
 /* ---------------DO NOT CHANGE THE FOLLOWING CODE OTHERWISE THE FEATURED PANEL WONT WORK-------------------- */
 /* ---------------------------------------------------------------------------------------------------------- */
 
+/*
+Product Name: jCarousel
+Author: Jan Sorgalla
+Author URI: http://sorgalla.com/jcarousel/
+Licence: Dual licensed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT</a> and <a href="http://www.opensource.org/licenses/gpl-license.php">GPL</a> licenses.
+*/
+
 /* This is the visible area of you carousel. Set a width here to define how much items are visible. The width can be either fixed in px or flexible in %. Position must be relative! */
 .jcarousel{position:relative; overflow:hidden;}
 
@@ -48,5 +52,3 @@ a {
 
 /* These are the item elements. jCarousel works best, if the items have a fixed width and height (but it's not required). */
 .jcarousel li{float:left; white-space:normal;}
-
-/* ---------------------------------End Slider----------------------------------------- */
