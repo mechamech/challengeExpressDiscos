@@ -45,6 +45,51 @@ File: Layout CSS
 /* Content */
 #content{}
 
+#discosContainer {
+	width:90%;
+	display:flex;
+	flex-wrap: wrap;
+	margin:0 auto;
+	padding:20px;
+}
+
+#discosHeader {
+	margin:20px 0;
+	text-align: center;
+	font-size:36px;
+}
+
+article.disco {
+	height:350px;
+	width:300px;
+	border:1px solid white;
+	flex-shrink: 0;
+	margin:10px;
+	padding:5px;
+}
+
+.disco .imgContainer {
+	width:200px;
+	height:200px;
+}
+
+.disco p {
+	text-align: center;
+	-webkit-margin-after:0;
+	-webkit-margin-before:0;
+	margin:10px;
+}
+
+p.discoNombre {
+	font-weight: bold;
+	font-size:25px;
+}
+
+p.discoArtista {
+	font-size:20px;
+}
+
+
 /* Comments */
 #comments ul{margin:0 0 40px 0; padding:0; list-style:none;}
 #comments li.comment_odd, #comments li.comment_even{margin:0 0 10px 0; padding:15px; list-style:none;}
