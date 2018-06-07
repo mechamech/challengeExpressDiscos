@@ -6,8 +6,8 @@ block content
       #homepage
         #services
           ul.clear
-            each genre, index in genres
+            each object, index in generos
               li
                 article
-                  a.service(class=`s-${index + 1 }` href='/genero')
-                    h2=genre
+                  a.service(class=`s-${index + 1 }` style='background-image: url(/images/'+ object.img +');' href='discografia/generos/'+ index)
+                    h2 #{object.genero}

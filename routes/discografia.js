@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-var generos =["Rock","Soul","Folk","Clasico"]
-
+var generos =[{genero: "Rock", img: "rock.png"},
+              {genero: "Soul", img: "soul.png"},
+              {genero: "Folk", img: "folk.png"},
+              {genero: "Clásico", img: "classical.png"}];
 var discos=[{id:"0",
     nombre: "Unplugged",
     artista:"Alejandro Sanz",
@@ -37,7 +39,7 @@ router.get('/', function(req, res, next) {
 });
 
 // (devuelve un arreglo con todas los géneros musicales disponibles)
-router.get('/genero', function(req, res, next) {
+router.get('/generos', function(req, res, next) {
     res.render('generos',{generos} );
 });
 

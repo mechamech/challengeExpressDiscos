@@ -1,9 +1,9 @@
 extends layout
 
 block generos
-  for genero in generos
+  each object, index in generos
     li
-      a(href='pages/full-width.html') #{genero}
+      a(href='/genero/' + index) #{object.genero}
 
 block content
   #slider.jcarousel-wrapper
@@ -18,6 +18,6 @@ block content
                 h2 #{disco.nombre}
                 p by #{disco.artista}
                 footer
-                  a(href='/discos/' + disco.id) Read More Here &raquo;
+                  a(href='/discos/' + disco.id) Más info aquí &raquo;
     a#featured-item-prev.jcarousel-control-prev(href='#') &laquo; Previous
     a#featured-item-next.jcarousel-control-next(href='#') Next &raquo;

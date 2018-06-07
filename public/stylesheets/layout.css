@@ -8,6 +8,7 @@ Licence URI: http://www.os-templates.com/template-terms
 File: Layout CSS
 */
 
+@import url("search.css");
 @import url("framework.css");
 @import url("slider.css");
 
@@ -23,10 +24,10 @@ File: Layout CSS
 
 /* Header
 ---------------------------------------------------------------------------------------------------------------*/
-#header{padding:40px 0;}
+#header{padding:40px 0; display: flex; justify-content: space-between;align-items: center;}
 #header::after{display:block; visibility:hidden; height:0; clear:both; content:"";}
 
-#header #logo{float:left;}
+/* #header #logo{float:left;} */
 #header #logo h1, #header #logo p{font-weight:normal; font-style:normal; text-transform:none;}
 #header #logo h1{font-size:28px; line-height:22px;}
 #header #logo p{margin:0; padding:0; font-size:11px;}
@@ -146,7 +147,7 @@ p.discoArtista {
 nav ul{margin:0; padding:0; list-style:none;}
 
 /* Top Navigation */
-#header nav{display:block; float:right; margin:0; padding:0; clear:right;}
+#header nav{display:block; margin:0; padding:0; clear:right;}
 #header nav ul{}
 #header nav ul li{display:inline-block; margin-left:10px; text-transform:uppercase;}
 #header nav ul li:first-child{margin-left:0;}
@@ -234,14 +235,14 @@ table tbody tr.dark{}
 #services a h2{font-size:32px;}
 #services a:hover, #services a:hover h2{}
 #services a.service{background-position:0 0; background-repeat:no-repeat;}
-#services a.s-1{background-image:url("images/icons/icon-1.png"); background-position:-185px 20px;}
+#services a.s-1{background-position:-185px 20px;}
 #services a.s-1:hover{background-position:46px 20px;}
-#services a.s-2{background-image:url("images/icons/icon-2.png"); background-position:-180px 20px;}
+#services a.s-2{background-position:-180px 20px;}
 #services a.s-2:hover{background-position:51px 20px;}
-#services a.s-3{background-image:url("images/icons/icon-3.png"); background-position:-180px 20px;}
-#services a.s-3:hover{background-position:51px 20px;}
-#services a.s-4{background-image:url("images/icons/icon-4.png"); background-position:-170px 20px;}
-#services a.s-4:hover{background-position:61px 20px;}
+#services a.s-3{background-position:-185px 20px;}
+#services a.s-3:hover{background-position:46px 20px;}
+#services a.s-4{background-position:-185px 20px;}
+#services a.s-4:hover{background-position:46px 20px;}
 
 
 /* Group CSS3 Attributes
@@ -253,16 +254,6 @@ table tbody tr.dark{}
 
 #services a:hover, #services a:hover h2{-webkit-transition:background-color 400ms ease-in; -moz-transition:background-color 400ms ease-in; -ms-transition:background-color 400ms ease-in; -o-transition:background-color 400ms ease-in; transition:background-color 400ms ease-in;}
 
-
-/*-------------------------------------------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------------------------------------------*/
-
-
-/* Colours
----------------------------------------------------------------------------------------------------------------*/
 
 body{color:#979797; background:url("../images/bbg1.jpg") top center no-repeat fixed #2B2B2B; background-size:cover;}
 
