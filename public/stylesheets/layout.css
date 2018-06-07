@@ -41,7 +41,9 @@ File: Layout CSS
 #container .last{margin:0;}
 #container .more{text-align:right;}
 
-.spacer{display:block; padding:20px;}
+.spacer{display:flex;
+	justify-content: center;
+	padding:5%;}
 
 /* Content */
 #content{}
@@ -183,7 +185,8 @@ legend{display:none;}
 input, textarea, select{resize:none; outline:none; font-size:12px; font-family:Georgia,"Times New Roman",Times,serif;}
 
 #comments form{display:block; width:100%;}
-#comments form input{width:170px; padding:2px; margin:5px 5px 0 0;}
+/* width de los input */
+#comments form input{width:250px; padding:2px; margin:5px 5px 0 0;}
 #comments form textarea{width:98%; padding:2px; overflow:auto;}
 #comments form p{margin:5px 0;}
 #comments form #submit, #comments form #reset{margin:0; padding:5px; cursor:pointer;}
@@ -192,6 +195,43 @@ input, textarea, select{resize:none; outline:none; font-size:12px; font-family:G
 #footer input, #footer textarea{display:block; width:205px; margin:0 0 10px 0; padding:10px; border:none;}
 #footer textarea{height:90px; overflow:auto;}
 #footer button{padding:8px; font-size:13px; font-weight:bold; text-transform:uppercase; border:none; cursor:pointer;}
+
+
+/* forms registro */
+#registro p{
+	font-size: 16px;
+}
+
+input{
+	height: 30px;
+}
+
+#registro button{
+	margin-top: 10px; 
+	padding: 10px 0;
+} 
+
+#registro button, #registro  input{
+	width: 255px;
+	background: transparent;
+	border:1px solid #979797;
+	color:#979797;
+	font-size: 16px;
+	outline: none;
+}
+
+#refistro button:hover{
+	background:	#76c38f;
+	color: white;
+}
+
+#registro button:active{
+	background:#387d4f;
+}
+
+#registro a{
+	color: #979797;
+}
 
 
 /* Tables
@@ -247,7 +287,8 @@ table tbody tr.dark{}
 
 /* Group CSS3 Attributes
 ---------------------------------------------------------------------------------------------------------------*/
-#header nav ul li a, #header nav ul li ul li a, #slider_content footer a, #showcase h2 span, #content, .sidebar, #comments input, #comments textarea, #comments button, #footer input, #footer textarea, #footer button{border-radius:10px;}
+/* border radius #commnet inputs buttons*/
+#header nav ul li a, #header nav ul li ul li a, #slider_content footer a, #showcase h2 span, #content, .sidebar, #comments textarea, #footer input, #footer textarea, #footer button{border-radius:10px;}
 
 #showcase ul li:nth-child(3n+1){margin-left:0;}
 #showcase ul li a:hover{-webkit-transition:border-color 400ms ease-in; -moz-transition:border-color 400ms ease-in; -ms-transition:border-color 400ms ease-in; -o-transition:border-color 400ms ease-in; transition:border-color 400ms ease-in;}

@@ -6,23 +6,17 @@ block content
             #content.two_third
                 .spacer
                     #comments
-                        form(action="nuevo", method="POST")
+                         form(action="login", method="POST" id="registro")
                             p
-                                input(type="text" name="nombre" placeholder="*Nombre" id="nombre")
-                                label 
+                                label e-mail*
+                            p    
+                                input(type="email" name="email" id="emailLogin") 
                             p
-                                input(type="email" name="email" placeholder="*e-mail" id="email")
-                                label
+                                label Contraseña*
                             p
-                                input(type="password" name="password" placeholder="*contraseña" id="password")
-                                label 
-                            button(type="submit" id="btnNuevo") Aceptar
+                                input(type="password" name="password" id="passwordLogin")
+                            button(type="submit" id="btnLogin") Entrar
+                            p   
+                                a(href="/discografia/nuevoUsuario") Nuevo usuario
+                                
 
-                        form(action="login", method="POST")
-                            p
-                                input(type="email" name="email" placeholder="*e-mail" id="emailLogin") 
-                                label
-                            p
-                                input(type="password" name="password" placeholder="*contraseña" id="passwordLogin")
-                                label
-                            button(type="submit" id="btnLogin") Entrar   
