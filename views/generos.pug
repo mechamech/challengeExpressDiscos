@@ -1,6 +1,6 @@
 extends layout
 
-block Content
+block content 
   .wrapper.row2
     main#container.clear
       //- container body
@@ -10,7 +10,7 @@ block Content
         #services
           ul.clear
             for genero in generos
-            li
-              article
-                a.service.s-1(href='/genero/id')
-                  h2 genero
+              li
+                article
+                  a.service.s-1(href='/genero/id')
+                    h2=genero
