@@ -1,11 +1,15 @@
 extends layout
+append head
+	link(rel="stylesheet", href="/stylesheets/discos.css" type='text/css')
 block content
-	h1#discosHeader Todos los discos
+	h1#discosHeader #{titulo}
 	#discosContainer
-		for disco in discos
+		for disco in discosRender
 			article.disco
-				.imgContainer 
-					img(alt="imagen")
-				p.discoNombre #{disco.nombre}
-				p.discoArtista #{disco.artista}
-				p.discoGenero Género: #{disco.genero}
+				.imgContainer
+					a(href='/discos/'+disco.id)
+						img(src="/images/" + disco.img alt=disco.nombre)
+				.infoContainer
+					p.discoNombre #{disco.nombre}
+					p.discoArtista #{disco.artista}
+					p.discoGenero Género: #{disco.genero}

@@ -1,0 +1,39 @@
+article.disco {
+	width:60%;
+	margin:30px auto;
+	padding:50px;
+	border:0;
+	display:flex;
+}
+
+.disco .imgContainer {
+	width:400px;
+	height:400px;
+}
+
+.imgContainer img {
+	max-width:400px;
+	max-height:400px;
+}
+
+.infoContainer {
+	text-align:left;
+	margin-left:20px;
+}
+
+.infoContainer p {
+	margin:5px 0;
+}
+
+p.discoNombre {
+	font-size:36px;
+	font-weight: bold;
+}
+
+p.discoArtista {
+	font-size: 30px;
+}
+
+p.discoGenero {
+	font-size:22px;
+}

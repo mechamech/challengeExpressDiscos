@@ -1,9 +1,10 @@
 doctype html
-
-head
-	title Discos
-	meta(charset='utf-8')
-	link(rel='stylesheet' href='/stylesheets/layout.css' type='text/css')
+block head
+	head
+		title Discos
+		meta(charset='utf-8')
+		link(rel='stylesheet' href='/stylesheets/layout.css' type='text/css')
+		link(href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet")
 
 body
 	script(type='text/javascript' src='javascripts/jquery.min.js')
@@ -17,7 +18,7 @@ body
 			header#header.clear
 				#logo
 					h1
-						a(href='index.html') The Modernist
+						a(href='/') The Modernist
 					p Tienda de Discos
 				div.form-wrapper.cf
 					input#busqueda(type='text' placeholder='Search here...' required='')
@@ -25,9 +26,9 @@ body
 				nav
 					ul.clear
 						li.active
-							a(href='index.html') Home
+							a(href='/') Home
 						li
-							a.drop(href='#') Géneros
+							a.drop(href='/generos') Géneros
 							//-acá se cargan los li de géneros dinámicamente
 							ul
 								block generos
@@ -38,9 +39,7 @@ block footer
 	.wrapper.row3
 		footer#footer.clear
 			.one_quarter
-				h2.title About Us
-				figure.imgholder
-					img(src='images/demo/215x90.gif' alt='')
+				h3.title About Us
 				p
 					| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper pellentesque.
 				p
