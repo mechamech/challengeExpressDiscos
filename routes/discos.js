@@ -68,7 +68,8 @@ var discos = [{
 
 // (trae todos los discos)
 router.get('/', function(req, res, next) {
-    res.render('discos',{discos} );
+    let discosRender = discos;
+    res.render('discos',{discosRender, titulo: "Todos los discos"} );
 });
 
 // (trae el detalle de un disco particular)
