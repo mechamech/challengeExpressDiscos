@@ -8,11 +8,10 @@ block head
 
 body
 	script(type='text/javascript' src='javascripts/jquery.min.js')
-	script(type='text/javascript' src='/javascripts/jquery-3.3.1.min.js')
 	script(type='text/javascript' src='javascripts/jquery.grayscale.js')
 	script(type='text/javascript' src='javascripts/jquery.jcarousel.pack.js')
 	script(type='text/javascript' src='javascripts/jquery.jcarousel.setup.js')
-	script(type='text/javascript' src='/javascripts/index.js')
+
 	block header
 		.wrapper.row1
 			header#header.clear
@@ -32,6 +31,8 @@ body
 							//-acá se cargan los li de géneros dinámicamente
 							ul
 								block generos
+						li
+							a(href='/discografia/registro') Ingresar
 
 			block content
 
@@ -57,3 +58,6 @@ block footer
 			p.fl_right
 				| Template by 
 				a(target='_blank' href='http://www.os-templates.com/' title='Free Website Templates') OS Templates
+	
+	script(type='text/javascript' src='/javascripts/jquery-3.3.1.min.js')
+	script(type='text/javascript' src='/javascripts/index.js')

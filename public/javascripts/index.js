@@ -1,16 +1,16 @@
 $("#btnNuevo").on("click", function(e){
     var error=false;
-    $('label').html("");
+    $('#registro input').css("border","1px solid #979797");
     if(!$("#nombre").val()){
-        $("#nombre").next().html("Campo obligatorio");
+        $("#nombre").css("border","1px solid red");
         error=true;
     }
     if(!$("#email").val()){
-        $("#email").next().html("Campo obligatorio");
+        $("#email").css("border","1px solid red");
         error=true;
     }
     if(!$("#password").val()){
-        $("#password").next().html("Campo obligatorio");
+        $("#password").css("border","1px solid red");
         error=true;
     }
     if(error){
@@ -20,13 +20,13 @@ $("#btnNuevo").on("click", function(e){
 
 $("#btnLogin").on("click", function(e){
     var error=false;
-    $('label').html("");
+    $('#registro input').css("border","1px solid #979797");
     if(!$("#emailLogin").val()){
-        $("#emailLogin").next().html("Campo obligatorio");
+        $("#emailLogin").css("border","1px solid red");
         error=true;
     }
     if(!$("#passwordLogin").val()){
-        $("#passwordLogin").next().html("Campo obligatorio");
+        $("#passwordLogin").css("border","1px solid red");
         error=true;
     }
     if(error){
