@@ -1,42 +1,16 @@
 var express = require('express');
 var router = express.Router();
 
-var generos =[{genero: "Rock", img: "rock.png"},
-              {genero: "Soul", img: "soul.png"},
-              {genero: "Folk", img: "folk.png"},
-              {genero: "Clásico", img: "classical.png"}];
-var discos=[{id:"0",
-    nombre: "Unplugged",
-    artista:"Alejandro Sanz",
-    genero:generos[0],
-    img: "/images/unplugged.png"},
-    {id:"1",
-    nombre: "Nevermind",
-    artista:"Nirvana",
-    genero:generos[0],
-    img: "/images/nevermind.png"},
-    {id:"2",
-    nombre: "The Wall",
-    artista:"Pink Floyd",
-    genero:generos[0],
-    img: "/images/thewall.png"},
-    {id:"3",
-    nombre: "Aretha Now",
-    artista:"Aretha Franklin",
-    genero:generos[1],
-    img: "/images/arethanow.png"},
-    {id:"4",
-    nombre: "Back to Black",
-    artista:"Amy Winehouse",
-    genero:generos[1],
-    img: "/images/backtoblack.png"},
-]
-
-/* GET home page. */
-// (debe cargar la home con los discos favoritos)
-router.get('/', function(req, res, next) {
-  res.render('index', { generos, discos })
-});
+var usuarios=[{nombre:"Mecha",
+     email:"mecha@gmail.com",
+     password:"mecha"},
+     {nombre:"Georgina",
+     email:"georgi@gmail.com",
+     password:"georgi"},
+     {nombre:"Débora",
+     email:"debo@gmail.com",
+     password:"debo"},
+    ];
 
 // (devuelve un arreglo con todas los géneros musicales disponibles)
 router.get('/generos', function(req, res, next) {
@@ -45,21 +19,40 @@ router.get('/generos', function(req, res, next) {
 
 // (trae todos los discos)
 router.get('/discos', function(req, res, next) {
-  res.render('discos',{discos} );
+    res.render('discos',{discos} );
 });
 
 // (trae el detalle de un disco particular)
 router.get('/discos/:id', function(req, res, next) {
     var id=req.params.id;
-    var disco = discos.find((disco)=> {return disco.id == id})
-    res.render('x',{disco} );
+    var disco = discos.find((disco)=> {return disco.id == id});
+    res.render('disco',{disco} );
 });
 
 // (trae todos los discos de un genero pasado por parametro)
-router.get('/discos/generos/:id', function(req, res, next) {
+router.get('/generos/:id', function(req, res, next) {
     var id=req.params.id;
+    discos = discos.filter(disco => disco.genero == generos[id].genero);
+    res.render('discos', {discos} );
+});
 
-    res.render('x',{} );
+router.post('/nuevo', function(req, res, next) {
+    usuarios.push({nombre: req.body.nombre,email: req.body.email,password:req.body.password});
+    res.redirect('/');
+    console.log(usuarios)
+});
+
+router.post('/login', function(req, res, next) {
+    var usuario= usuarios.find((usuario)=> {return usuario.email == req.body.email && usuario.password==req.body.password})
+    if(usuario){
+        res.redirect('/');
+    }else{
+        res.send("")
+    }
+});
+
+router.get('/registro', function(req, res, next) {
+    res.render('registro');
 });
 
 module.exports = router;
