@@ -46,6 +46,18 @@ File: Layout CSS
 /* Content */
 #content{}
 
+#slider_content.jcarousel img {
+	transition: filter .3s ease-in-out;
+  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); /* FF 35+ */
+}
+
+#slider_content.jcarousel img:hover {
+  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(0%); /* FF 35+ */
+}
+
+
 /* Comments */
 #comments ul{margin:0 0 40px 0; padding:0; list-style:none;}
 #comments li.comment_odd, #comments li.comment_even{margin:0 0 10px 0; padding:15px; list-style:none;}
@@ -135,7 +147,7 @@ nav ul{margin:0; padding:0; list-style:none;}
 ---------------------------------------------------------------------------------------------------------------*/
 form, fieldset, legend{margin:0; padding:0; border:none;}
 legend{display:none;}
-input, textarea, select{resize:none; outline:none; font-size:12px; font-family:Georgia,"Times New Roman",Times,serif;}
+input, textarea, select{resize:none; outline:none;}
 
 #comments form{display:block; width:100%;}
 #comments form input{width:170px; padding:2px; margin:5px 5px 0 0;}
