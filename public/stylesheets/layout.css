@@ -264,7 +264,7 @@ table tbody tr.dark{}
 /* Colours
 ---------------------------------------------------------------------------------------------------------------*/
 
-body{color:#979797; background:url("images/bbg.jpg") top center no-repeat fixed #2B2B2B; background-size:cover;}
+body{color:#979797; background:url("../images/bbg1.jpg") top center no-repeat fixed #2B2B2B; background-size:cover;}
 
 .imgholder, .imgl, .imgr{border-color:#D6D6D6;}
 
@@ -292,7 +292,7 @@ body{color:#979797; background:url("images/bbg.jpg") top center no-repeat fixed 
 
 /* Footer */
 #footer nav ul li{border-bottom:1px solid #404040;}
-#footer nav ul li a{background-image:url("images/arrow.gif");}
+#footer nav ul li a{background-image:url("../images/arrow.gif");}
 #footer figure.imgholder{border-color:#555555;}
 
 /* Navigation */
@@ -301,9 +301,9 @@ body{color:#979797; background:url("images/bbg.jpg") top center no-repeat fixed 
 #header nav ul li ul li a:link, #header nav ul li ul li a:visited{color:#FFFFFF; background-color:#000000;}
 #header nav ul li ul li a:hover{color:#FFFFFF; background-color:#76C38F;}
 
-.sidebar nav a{color:#979797; background-image:url("images/file.gif"); background-color:transparent; border-bottom:1px solid #666666;}
+.sidebar nav a{color:#979797; background-image:url("../images/file.gif"); background-color:transparent; border-bottom:1px solid #666666;}
 .sidebar nav a:hover{color:#76C38F; background-color:#666666;}
-.sidebar nav ul ul a, .sidebar nav ul ul ul a, .sidebar nav ul ul ul ul a, .sidebar nav ul ul ul ul ul a{background-image:url("images/black_file.gif"); background-color:transparent;}
+.sidebar nav ul ul a, .sidebar nav ul ul ul a, .sidebar nav ul ul ul ul a, .sidebar nav ul ul ul ul ul a{background-image:url("../images/black_file.gif"); background-color:transparent;}
 
 /* Forms */
 #comments form input, #comments form textarea{border:1px solid #CCCCCC;}
@@ -334,4 +334,4 @@ table tbody tr.dark{color:#666666; background-color:#E8E8E8;}
 /* Slider */
 #slider h1, #slider h2, #slider h3, #slider h4, #slider h5, #slider h6{color:#FFFFFF; background-color:transparent;}
 #slider_content ul li figure figcaption footer a{color:#FFFFFF; background-color:#76C38F;}
-#featured-item-prev, #featured-item-next{background-image:url("images/carousel/prev_next.png"); background-color:transparent;}
+#featured-item-prev, #featured-item-next{background-image:url("../images/prev_next.png"); background-color:transparent;}

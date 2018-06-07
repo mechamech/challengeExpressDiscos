@@ -1,16 +1,13 @@
 extends layout
 
-block Content
+block content
   .wrapper.row2
     main#container.clear
-      //- container body
-      //- ##########################################################################################
       #homepage
-        //- Services
         #services
           ul.clear
-            for genero in generos
-            li
-              article
-                a.service.s-1(href='/genero/id')
-                  h2 genero
+            each genre, index in genres
+              li
+                article
+                  a.service(class=`s-${index + 1 }` href='/genero')
+                    h2=genre

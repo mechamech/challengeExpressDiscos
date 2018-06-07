@@ -5,58 +5,51 @@ head
 	meta(charset='utf-8')
 	link(rel='stylesheet' href='/stylesheets/layout.css' type='text/css')
 
-block header
-	.wrapper.row1
-		header#header.clear
-			#logo
-				h1
-					a(href='index.html') The Modernist
-				p Free Website Template
-			nav
-				ul.clear
-					li.active
-						a(href='index.html') Home
-					li
-						a.drop(href='#') Géneros
-						//-acá se cargan los li de géneros dinámicamente
-						ul
-							block generos
-							//-HARDCODEADO SÓLO DE MUESTRA
-							li
-								a(href='pages/full-width.html') Género 2
-							li
-								a(href='pages/sidebar-left.html') Género 3
-							li
-								a(href='pages/sidebar-right.html') Género 4
+body
+	script(src='javascripts/jquery.min.js')
+	script(src='javascripts/jquery.grayscale.js')
+	script(src='javascripts/jquery.jcarousel.pack.js')
+	script(src='javascripts/jquery.jcarousel.setup.js')
+	block header
+		.wrapper.row1
+			header#header.clear
+				#logo
+					h1
+						a(href='index.html') The Modernist
+					p Free Website Template
+				nav
+					ul.clear
+						li.active
+							a(href='index.html') Home
+						li
+							a.drop(href='#') Géneros
+							//-acá se cargan los li de géneros dinámicamente
+							ul
+								block generos
 
-block content
+			block content
 
-block footer
-	.wrapper.row3
-		footer#footer.clear
-			.one_quarter
-				h2.title About Us
-				figure.imgholder
-					img(src='images/demo/215x90.gif' alt='')
-				p
-					| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper pellentesque.
-				p
-					| Tel: xxxxx xxxxxxxxxx
-					br
-					|         Fax: xxxxx xxxxxxxxxx
-					br
-					|         Email: 
-					a(href='#') contact@mydomain.com
-	.wrapper.row4
-		#copyright.clear
-			p.fl_left
-				| Copyright &copy; 2014 - All Rights Reserved - 
-				a(href='#') Domain Name
-			p.fl_right
-				| Template by 
-				a(target='_blank' href='http://www.os-templates.com/' title='Free Website Templates') OS Templates
-// JAVASCRIPTS
-script(src='layout/scripts/jquery.min.js')
-script(src='layout/scripts/jquery.grayscale.js')
-script(src='layout/scripts/carousel/jquery.jcarousel.pack.js')
-script(src='layout/scripts/carousel/jquery.jcarousel.setup.js')
+	block footer
+		.wrapper.row3
+			footer#footer.clear
+				.one_quarter
+					h2.title About Us
+					figure.imgholder
+						img(src='images/demo/215x90.gif' alt='')
+					p
+						| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper pellentesque.
+					p
+						| Tel: xxxxx xxxxxxxxxx
+						br
+						|         Fax: xxxxx xxxxxxxxxx
+						br
+						|         Email: 
+						a(href='#') contact@mydomain.com
+		.wrapper.row4
+			#copyright.clear
+				p.fl_left
+					| Copyright &copy; 2014 - All Rights Reserved - 
+					a(href='#') Domain Name
+				p.fl_right
+					| Template by 
+					a(target='_blank' href='http://www.os-templates.com/' title='Free Website Templates') OS Templates
