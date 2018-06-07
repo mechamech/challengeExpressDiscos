@@ -1,0 +1,11 @@
+extends layout
+append head
+	link(rel="stylesheet", href="/stylesheets/disco.css" type='text/css')
+block content
+		article.disco
+			.imgContainer
+				img(src="/images/" + disco.img alt=disco.nombre)
+			.infoContainer
+				p.discoNombre #{disco.nombre}
+				p.discoArtista #{disco.artista}
+				p.discoGenero Género: #{disco.genero}

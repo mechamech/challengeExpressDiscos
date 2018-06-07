@@ -1,0 +1,46 @@
+#discosContainer {
+	width:90%;
+	display:flex;
+	flex-wrap: wrap;
+	margin:0 auto;
+	padding:20px;
+}
+
+#discosHeader {
+	margin:20px 0;
+	text-align: center;
+	font-size:36px;
+}
+
+article.disco {
+	width:300px;
+	background-color: hsla(0,0%,0%,.6);
+	flex-shrink: 0;
+	margin:10px;
+	padding:5px;
+	display:flex;
+	flex-direction: column;
+}
+
+.disco .imgContainer {
+	max-width:300px;
+}
+
+.disco .infoContainer {
+	text-align: center;
+}
+
+.disco p {
+	-webkit-margin-after:0;
+	-webkit-margin-before:0;
+	margin:10px;
+}
+
+p.discoNombre {
+	font-weight: bold;
+	font-size:25px;
+}
+
+p.discoArtista {
+	font-size:20px;
+}

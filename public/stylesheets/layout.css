@@ -16,7 +16,7 @@ File: Layout CSS
 /* Rows
 ---------------------------------------------------------------------------------------------------------------*/
 .row0, .row0 a{}
-.row1{border-top:5px solid;}
+.row1{border-top:5px solid; padding-bottom:30px;}
 .row2, .row2 a{}
 .row3{border-bottom:1px solid;}
 .row4{border-top:1px solid;}
@@ -48,48 +48,15 @@ File: Layout CSS
 /* Content */
 #content{}
 
-#discosContainer {
-	width:90%;
-	display:flex;
-	flex-wrap: wrap;
-	margin:0 auto;
-	padding:20px;
+#slider_content.jcarousel img {
+	transition: filter .3s ease-in-out;
+  -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(100%); /* FF 35+ */
 }
 
-#discosHeader {
-	margin:20px 0;
-	text-align: center;
-	font-size:36px;
-}
-
-article.disco {
-	height:350px;
-	width:300px;
-	border:1px solid white;
-	flex-shrink: 0;
-	margin:10px;
-	padding:5px;
-}
-
-.disco .imgContainer {
-	width:200px;
-	height:200px;
-}
-
-.disco p {
-	text-align: center;
-	-webkit-margin-after:0;
-	-webkit-margin-before:0;
-	margin:10px;
-}
-
-p.discoNombre {
-	font-weight: bold;
-	font-size:25px;
-}
-
-p.discoArtista {
-	font-size:20px;
+#slider_content.jcarousel img:hover {
+  -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+  filter: grayscale(0%); /* FF 35+ */
 }
 
 
@@ -182,7 +149,7 @@ nav ul{margin:0; padding:0; list-style:none;}
 ---------------------------------------------------------------------------------------------------------------*/
 form, fieldset, legend{margin:0; padding:0; border:none;}
 legend{display:none;}
-input, textarea, select{resize:none; outline:none; font-size:12px; font-family:Georgia,"Times New Roman",Times,serif;}
+input, textarea, select{resize:none; outline:none;}
 
 #comments form{display:block; width:100%;}
 /* width de los input */
