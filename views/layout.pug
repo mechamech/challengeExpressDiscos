@@ -20,10 +20,8 @@ block header
 						a.drop(href='#') Géneros
 						//-acá se cargan los li de géneros dinámicamente
 						ul
-							//- for genero in generos
-							//- 	li
-							//- 		a(href='genero/' + genero) #{genero}
-							//-HARDCODEADOS, SACAR
+							block generos
+							//-HARDCODEADO SÓLO DE MUESTRA
 							li
 								a(href='pages/full-width.html') Género 2
 							li
