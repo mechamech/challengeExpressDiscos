@@ -9,7 +9,7 @@ File: Framework CSS
 */
 
 html{overflow-y:scroll;}
-body{margin:0; padding:0; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif;}
+body{margin:0; padding:0; font-size:13px; font-family:Raleway;}
 
 .clear::after{display:block; visibility:hidden; height:0; clear:both; content:"";}
 

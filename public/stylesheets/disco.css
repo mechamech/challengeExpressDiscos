@@ -1,7 +1,3 @@
-body {
-	background-color:hsla(0,0%,0%,.6);
-}
-
 article.disco {
 	width:60%;
 	margin:30px auto;
@@ -25,8 +21,13 @@ article.disco {
 	margin-left:20px;
 }
 
+.infoContainer p {
+	margin:5px 0;
+}
+
 p.discoNombre {
 	font-size:36px;
+	font-weight: bold;
 }
 
 p.discoArtista {

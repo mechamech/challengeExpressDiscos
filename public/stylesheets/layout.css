@@ -16,7 +16,7 @@ File: Layout CSS
 /* Rows
 ---------------------------------------------------------------------------------------------------------------*/
 .row0, .row0 a{}
-.row1{border-top:5px solid;}
+.row1{border-top:5px solid; padding-bottom:30px;}
 .row2, .row2 a{}
 .row3{border-bottom:1px solid;}
 .row4{border-top:1px solid;}
