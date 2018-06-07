@@ -10,8 +10,8 @@ body
 	script(type='text/javascript' src='javascripts/jquery.grayscale.js')
 	script(type='text/javascript' src='javascripts/jquery.jcarousel.pack.js')
 	script(type='text/javascript' src='javascripts/jquery.jcarousel.setup.js')
-	//- script(type='text/javascript' src='/javascripts/jquery-3.3.1.min.js')
 	script(type='text/javascript' src='/javascripts/index.js')
+	script(type='text/javascript' src='javascripts/search.js')
 	block header
 		.wrapper.row1
 			header#header.clear
@@ -19,9 +19,9 @@ body
 					h1
 						a(href='index.html') The Modernist
 					p Tienda de Discos
-				form.form-wrapper.cf
-					input(type='text' placeholder='Search here...' required='')
-					button(type='submit') Search
+				div.form-wrapper.cf
+					input#busqueda(type='text' placeholder='Search here...' required='')
+					button#search Search
 				nav
 					ul.clear
 						li.active
