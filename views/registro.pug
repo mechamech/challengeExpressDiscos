@@ -1,28 +1,28 @@
 extends layout
 
 block content 
-    .wrapper.row2
-        main#container.clear
-            #content.two_third
-                .spacer
-                    #comments
-                        form(action="nuevo", method="POST")
-                            p
-                                input(type="text" name="nombre" placeholder="*Nombre" id="nombre")
-                                label 
-                            p
-                                input(type="email" name="email" placeholder="*e-mail" id="email")
-                                label
-                            p
-                                input(type="password" name="password" placeholder="*contraseña" id="password")
-                                label 
-                            button(type="submit" id="btnNuevo") Aceptar
+  .wrapper.row2
+      main#container.clear
+          #content.two_third
+              .spacer
+                  #comments
+                      form(action="nuevo", method="POST")
+                          p
+                              input(type="text" name="nombre" placeholder="*Nombre" id="nombre")
+                              label 
+                          p
+                              input(type="email" name="email" placeholder="*e-mail" id="email")
+                              label
+                          p
+                              input(type="password" name="password" placeholder="*contraseña" id="password")
+                              label 
+                          button(type="submit" id="btnNuevo") Aceptar
 
-                        form(action="login", method="POST")
-                            p
-                                input(type="email" name="email" placeholder="*e-mail" id="emailLogin") 
-                                label
-                            p
-                                input(type="password" name="password" placeholder="*contraseña" id="passwordLogin")
-                                label
-                            button(type="submit" id="btnLogin") Entrar   
+                      form(action="login", method="POST")
+                          p
+                              input(type="email" name="email" placeholder="*e-mail" id="emailLogin") 
+                              label
+                          p
+                              input(type="password" name="password" placeholder="*contraseña" id="passwordLogin")
+                              label
+                          button(type="submit" id="btnLogin") Entrar

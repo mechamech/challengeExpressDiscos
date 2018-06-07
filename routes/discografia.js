@@ -8,7 +8,7 @@ var generos =[{
   img: "soul.png"
 },{
   genero: "Jazz",
-  img: "folk.png"
+  img: "jazz.png"
 },{
   genero: "Clásico",
   img: "classical.png"
