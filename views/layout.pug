@@ -10,7 +10,6 @@ body
 	script(type='text/javascript' src='/javascripts/jquery-3.3.1.min.js')
 	script(type='text/javascript' src='/javascripts/jquery.jcarousel.pack.js')
 	script(type='text/javascript' src='/javascripts/jquery.jcarousel.setup.js')
-	script(type='text/javascript' src='/javascripts/index.js')
 	script(type='text/javascript' src='/javascripts/search.js')
 	block header
 		.wrapper.row1
@@ -31,13 +30,13 @@ body
 							//-acá se cargan los li de géneros dinámicamente
 							ul
 								block generos
+									each object, index in generos
+										li
+											a(href='/generos/' + index) #{object.genero}
 						li
 							a#linkLogin(href='/ingreso') Ingresar
-			//- block content
-			//- 					each object, index in generos
-			//- 						li
-			//- 							a(href='/generos/' + index) #{object.genero}
-			//- 
+			block content
+							
 			//- #allContent
 			//- 	block content
 	block footer
@@ -62,4 +61,5 @@ body
 				p.fl_right
 					| Template by 
 					a(target='_blank' href='http://www.os-templates.com/' title='Free Website Templates') OS Templates
+	script(type='text/javascript' src='/javascripts/index.js')
 		
