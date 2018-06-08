@@ -151,7 +151,7 @@ form, fieldset, legend{margin:0; padding:0; border:none;}
 legend{display:none;}
 input, textarea, select{resize:none; outline:none;}
 
-#comments form{display:block; width:100%;}
+#comments form{display:flex; flex-wrap: wrap;justify-content: flex-start; width:300px;}
 /* width de los input */
 #comments form input{width:250px; padding:2px; margin:5px 5px 0 0;}
 #comments form textarea{width:98%; padding:2px; overflow:auto;}
@@ -164,21 +164,18 @@ input, textarea, select{resize:none; outline:none;}
 #footer button{padding:8px; font-size:13px; font-weight:bold; text-transform:uppercase; border:none; cursor:pointer;}
 
 
-/* forms registro */
-#registro p{
-	font-size: 16px;
+/* forms ingreso */
+
+#container .formIngreso h2{
+	width: 100%;
+	font-size: 20px;
 }
 
-input{
-	height: 30px;
+.formIngreso label{
+	font-size: 15px;
 }
 
-#registro button{
-	margin-top: 10px; 
-	padding: 10px 0;
-} 
-
-#registro button, #registro  input{
+.formIngreso button, .formIngreso  input{
 	width: 255px;
 	background: transparent;
 	border:1px solid #979797;
@@ -187,19 +184,36 @@ input{
 	outline: none;
 }
 
-#refistro button:hover{
+.formIngreso input{
+	height: 30px;
+}
+
+.formIngreso input:-webkit-autofill {
+    transition: all 5000s ease-in-out 0s;
+}
+
+.formIngreso button{
+	margin-top: 10px; 
+	padding: 10px 0;
+} 
+
+.formIngreso button:hover{
 	background:	#76c38f;
 	color: white;
 }
 
-#registro button:active{
+.formIngreso button:active{
 	background:#387d4f;
 }
 
-#registro a{
-	color: #979797;
+#login a{
+	color: #979797;	
+	font-size: 15px;
 }
 
+#login a:hover{
+	text-decoration: underline;
+}
 
 /* Tables
 ---------------------------------------------------------------------------------------------------------------*/
