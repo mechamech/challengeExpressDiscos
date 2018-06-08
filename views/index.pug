@@ -1,18 +1,19 @@
 extends layout
 
 block content
-  #slider.jcarousel-wrapper
-    #slider_content.jcarousel
-      ul
-        each disco in discos
-          li
-            figure
-              a(href='/discos/' + disco.id)
-                img(src='/images/' + disco.img alt='discCover')
-              figcaption
-                h2 #{disco.nombre}
-                p by #{disco.artista}
-                footer
-                  a(href='/discos/' + disco.id) Más info aquí &raquo;
-    a#featured-item-prev.jcarousel-control-prev(href='#') &laquo; Previous
-    a#featured-item-next.jcarousel-control-next(href='#') Next &raquo;
+  #sliderContainer
+    #slider.jcarousel-wrapper
+      #slider_content.jcarousel
+        ul
+          each disco in discos
+            li
+              figure
+                a(href='/discos/' + disco.id)
+                  img(src='/images/' + disco.img alt='discCover')
+                figcaption
+                  h2 #{disco.nombre}
+                  p by #{disco.artista}
+                  footer
+                    a(href='/discos/' + disco.id) Más info aquí &raquo;
+      a#featured-item-prev.jcarousel-control-prev(href='#') &laquo; Previous
+      a#featured-item-next.jcarousel-control-next(href='#') Next &raquo;
