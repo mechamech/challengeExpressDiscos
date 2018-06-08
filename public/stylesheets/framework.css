@@ -48,7 +48,7 @@ address, article, aside, figcaption, figure, footer, header, main, nav, section{
 /* Grid
 -----------------------------------------------------------------------------------*/
 .one_quarter, .two_quarter, .three_quarter{display:block; float:left; margin:0 0 0 20px;}
-.one_quarter{width:225px;}
+.one_quarter{width:32%;}
 .two_quarter{width:470px;}
 .three_quarter{width:715px;}
 

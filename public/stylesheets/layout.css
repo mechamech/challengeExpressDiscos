@@ -11,6 +11,7 @@ File: Layout CSS
 @import url("search.css");
 @import url("framework.css");
 @import url("slider.css");
+@import url("network.css");
 /* @import url("discos.css");
 @import url("disco.css"); */
 
@@ -194,9 +195,9 @@ input, textarea, select{resize:none; outline:none;}
 }
 
 .formIngreso button{
-	margin-top: 10px; 
+	margin-top: 10px;
 	padding: 10px 0;
-} 
+}
 
 .formIngreso button:hover{
 	background:	#76c38f;
@@ -208,7 +209,7 @@ input, textarea, select{resize:none; outline:none;}
 }
 
 #login a{
-	color: #979797;	
+	color: #979797;
 	font-size: 15px;
 }
 

@@ -1,0 +1,33 @@
+#footer {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.one_quarter {
+  text-align: center;
+}
+
+.redes_footer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.redes_footer .fab {
+  padding: 10px;
+  margin: 0 5px;
+  font-size: 22.4px;
+  color: #76c38f;
+  border: 1px solid;
+  border-radius: 50%;
+}
+
+.redes_footer .fab:hover {
+  opacity: 0.5;
+}
+
+.redes_footer .fa-facebook {
+  padding: 10px 12px;
+}
