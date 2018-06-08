@@ -1,75 +1,31 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const data = require('./data');
 
-var generos =[{
-  genero: "Rock",
-  img: "rock.png"
-},{
-  genero: "Soul",
-  img: "soul.png"
-},{
-  genero: "Jazz",
-  img: "jazz.png"
-},{
-  genero: "Clásico",
-  img: "classical.png"
-}];
+// router.post('/', function(req, res, next) {
+//   let parametroSearch = req.body.value;
+//   discosRender = discos.filter(disco => JSON.stringify(disco).toLowerCase().indexOf(parametroSearch.toLowerCase()) >= 0)
+//   res.json({data: JSON.stringify(discosRender)})
+// });
 
-var discos = [{
-  id:"1",
-  nombre:"Issues",
-  artista:"KORN",
-  genero:generos[0].genero,
-  img: "issues.jpg"
-},{
-  id:"2",
-  nombre:"Aha shake heartbreak",
-  artista:"KINGS OF LEON",
-  genero:generos[0].genero,
-  img: "aha.jpg"
-},{
-  id:"3",
-  nombre:"I",
-  artista: "ZAPP",
-  genero:generos[1].genero,
-  img: "i.jpg"
-},{
-  id:"4",
-  nombre: "The Ray Charles Story",
-  artista:"RAY CHARLES",
-  genero:generos[1].genero,
-  img: "raycharles.jpg"
-},{
-  id:"5",
-  nombre:"Mingus ah um" ,
-  artista:"CHARLES MINGUS",
-  genero:generos[2].genero,
-  img: "mingus.jpg"
-},{
-  id:"6",
-  nombre:"Big fun" ,
-  artista:"MILES DAVIS",
-  genero:generos[2].genero,
-  img: "bigfun.jpg"
-},{
-  id:"7",
-  nombre:"Glassworks" ,
-  artista:"PHILIP GLASS",
-  genero:generos[3].genero,
-  img: "glassworks.jpg"
-},{
-  id:"8",
-  nombre:"Canto ostinato" ,
-  artista:"SIMEON TEN HOLT",
-  genero:generos[3].genero,
-  img:"cantoostinato.jpg"
-}];
+// router.get('/ajax/:search', function(req, res, next) {
+//   let inputText = req.params.search;
+//   discos = data.discos.filter(disco => JSON.stringify(disco).toLowerCase().indexOf(inputText.toLowerCase()) >= 0);
+//   if (discos.length) {
+//     res.render('discSearch', {...data, discos, titulo: `Tu búsqueda "${inputText}" produjo los siguientes resultados:`, inputText })
+//   } else {
+//     res.render('notfind', {...data, titulo: "Lo sentimos! No se encontraron coincidencias...", inputText} )
+//   }
+// });
 
-router.post('/', function(req, res, next) {
-  let parametroSearch = req.body.value;
-  let discosRender = discos.filter(disco => JSON.stringify(disco).toLowerCase().indexOf(parametroSearch.toLowerCase()) >= 0)
-  console.log(discosRender);
-  res.json({data: JSON.stringify(discosRender)})
+router.get('/:search', function(req, res, next) {
+  let inputText = req.params.search;
+  discos = data.discos.filter(disco => JSON.stringify(disco).toLowerCase().indexOf(inputText.toLowerCase()) >= 0);
+  if (discos.length) {
+    res.render('discos', {...data, discos, titulo: `Tu búsqueda "${inputText}" produjo los siguientes resultados:`, inputText })
+  } else {
+    res.render('notfind', {...data, titulo: "Lo sentimos! No se encontraron coincidencias...", inputText} )
+  }
 });
 
 module.exports = router;

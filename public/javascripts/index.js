@@ -1,4 +1,6 @@
-$("#btnNuevo").on("click", function(e){
+console.log('loading');
+
+$(document).on("click", "#btnNuevo", function(e){
     var error=false;
     $('label').html("");
     if(!$("#nombre").val()){
@@ -13,12 +15,13 @@ $("#btnNuevo").on("click", function(e){
         $("#password").next().html("Campo obligatorio");
         error=true;
     }
+    console.log('adasd', error);
     if(error){
         return false;
     }
 })
 
-$("#btnLogin").on("click", function(e){
+$(document).on("click", "#btnLogin", function(e){
     var error=false;
     $('label').html("");
     if(!$("#emailLogin").val()){
@@ -33,5 +36,3 @@ $("#btnLogin").on("click", function(e){
         return false;
     }
 });
-
-

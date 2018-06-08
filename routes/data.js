@@ -60,6 +60,12 @@ const discos = [{
   artista:"SIMEON TEN HOLT",
   genero:generos[3].genero,
   img:"cantoostinato.jpg"
+},{
+  id:"9",
+  nombre:"Chakachas" ,
+  artista:"THE CHAKACHAS",
+  genero:generos[2].genero,
+  img:"chakachas.jpg"
 }];
 
 const data = {discos, generos};

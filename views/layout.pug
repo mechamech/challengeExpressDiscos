@@ -7,12 +7,12 @@ block head
 		link(href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet")
 
 body
-	script(type='text/javascript' src='javascripts/jquery.min.js')
-	script(type='text/javascript' src='javascripts/jquery.grayscale.js')
-	script(type='text/javascript' src='javascripts/jquery.jcarousel.pack.js')
-	script(type='text/javascript' src='javascripts/jquery.jcarousel.setup.js')
+	//-script(type='text/javascript' src='javascripts/jquery.grayscale.js')
+	script(type='text/javascript' src='/javascripts/jquery-3.3.1.min.js')
+	script(type='text/javascript' src='/javascripts/jquery.jcarousel.pack.js')
+	script(type='text/javascript' src='/javascripts/jquery.jcarousel.setup.js')
 	script(type='text/javascript' src='/javascripts/index.js')
-	script(type='text/javascript' src='javascripts/search.js')
+	script(type='text/javascript' src='/javascripts/search.js')
 	block header
 		.wrapper.row1
 			header#header.clear
@@ -21,7 +21,7 @@ body
 						a(href='/') The Modernist
 					p Tienda de Discos
 				div.form-wrapper.cf
-					input#busqueda(type='text' placeholder='Search here...' required='')
+					input#busqueda(type='text' placeholder='Search here...' required='' value=inputText)
 					button#search Search
 				nav
 					ul.clear
@@ -31,9 +31,12 @@ body
 							a.drop(href='/generos') Géneros
 							//-acá se cargan los li de géneros dinámicamente
 							ul
-								block generos
-
-			block content
+								each object, index in generos
+									li
+										a(href='/generos/' + index) #{object.genero}
+			
+			#allContent
+				block content
 
 block footer
 	.wrapper.row3
