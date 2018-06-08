@@ -7,6 +7,10 @@ Licence: Free to use under our free template licence terms
 Licence URI: http://www.os-templates.com/template-terms
 File: Slider CSS
 */
+#sliderContainer {
+	background-color: hsla(0,0%,0%,.6);
+	padding-top:30px;
+}
 
 #slider{display:block; position:relative; width:860px; height:430px; margin:0 auto; padding:0 50px 40px 50px; overflow:hidden; line-height:1.6em;}
 #slider::after{display:block; visibility:hidden; height:0; clear:both; content:"";}
