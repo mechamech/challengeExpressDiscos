@@ -11,6 +11,7 @@ body
 	script(type='text/javascript' src='/javascripts/jquery.jcarousel.pack.js')
 	script(type='text/javascript' src='/javascripts/jquery.jcarousel.setup.js')
 	script(type='text/javascript' src='/javascripts/search.js')
+	script(type='text/javascript' src='/javascripts/activeButtons.js')
 	block header
 		.wrapper.row1
 			header#header.clear
@@ -23,19 +24,20 @@ body
 					button#search Search
 				nav
 					ul.clear
-						li.active
+						li.home
 							a(href='/') Home
-						li
+						li.discos
+							a(href='/discos') Discos
+						li.generos
 							a.drop(href='/generos') Géneros
-							//-acá se cargan los li de géneros dinámicamente
 							ul
 								block generos
 									each object, index in generos
 										li
 											a(href='/generos/' + index) #{object.genero}
-						li
+						li.ingreso
 							a#linkLogin(href='/ingreso') Ingresar
-			block content
+	block content
 							
 			//- #allContent
 			//- 	block content
