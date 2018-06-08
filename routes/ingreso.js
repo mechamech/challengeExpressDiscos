@@ -1,10 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const data = require('./data');
 
 var usuarios=[];
 
 router.get('/', function(req, res, next) {
-    res.render('ingreso');
+    res.render('ingreso', data);
 });
 
 router.post('/login', function(req, res, next) {

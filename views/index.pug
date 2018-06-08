@@ -1,10 +1,5 @@
 extends layout
 
-block generos
-  each object, index in generos
-    li
-      a(href='/generos/' + index) #{object.genero}
-
 block content
   #slider.jcarousel-wrapper
     #slider_content.jcarousel

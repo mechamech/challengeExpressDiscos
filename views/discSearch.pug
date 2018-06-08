@@ -1,0 +1,12 @@
+.wrapper.row2
+  h1#discosHeader #{titulo}
+  #discosContainer
+    for disco in discos
+      article.disco
+        .imgContainer
+          a(href='/discos/'+disco.id)
+            img(src="/images/" + disco.img alt=disco.nombre)
+        .infoContainer
+          p.discoNombre #{disco.nombre}
+          p.discoArtista #{disco.artista}
+          p.discoGenero Género: #{disco.genero}
