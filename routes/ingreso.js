@@ -11,15 +11,16 @@ router.get('/', function(req, res, next) {
 router.post('/login', function(req, res, next) {
     var usuario= usuarios.find((usuario)=> {return usuario.email == req.body.email && usuario.password==req.body.password})
     if(usuario){
-        res.redirect('/');
+        res.render('index', {...data, usuario:usuario.nombre});
     }else{
-        res.send(404);
+        res.render('notfind', {...data, titulo: "El usuario o la contraseña son incorrectos..."});
     }
 });
 
 router.post('/nuevo', function(req, res, next) {
     usuarios.push({nombre: req.body.nombre,email: req.body.email,password:req.body.password});
-    res.redirect('/');
+    // res.redirect('/');
+    res.render('index', {...data, usuario:req.body.nombre});
 });
 
 module.exports = router;

@@ -1,8 +1,6 @@
-$('#nuevaCuenta').hide();
-
 function ocultarLogin(){
     $("#login").hide();
-    $("#nuevaCuenta").show();
+    $("#nuevaCuenta *").css("display","block");
 };
 
 $("#login a").on("click", function(e){
@@ -15,6 +13,7 @@ $("form").on("submit", function(){
     let formId=$(this).attr("id");
     let inputs=Array.from($("#"+formId+" input"))
     $(".formIngreso input").css("border","1px solid #979797");
+    $("#lblPassword").html("");
     $(inputs).each(function( index, element ) {
         if(!element.value){
             $(element).css("border","1px solid red");
@@ -28,7 +27,6 @@ $("form").on("submit", function(){
             validarPassword();
             return false
         }
-        $("#linkLogin").text("salir")
     }
 });
 

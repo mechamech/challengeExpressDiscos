@@ -37,7 +37,11 @@ body
 										li
 											a(href='/generos/' + index) #{object.genero}
 						li.ingreso
-							a#linkLogin(href='/ingreso') Ingresar
+							if usuario
+								a(href='/ingreso') #{usuario}
+							else
+								a(href='/ingreso') Ingresar
+
 	block content
 							
 			//- #allContent
