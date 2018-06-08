@@ -1,8 +1,26 @@
 $(document).on('click', '#search', function(event){
   event.preventDefault();
   let busqueda = {"value": $('#busqueda').val()};
-  let discos;
-  window.location.href = '/search/'+ busqueda.value
+
+  if (busqueda.value)  {
+    window.location.href = '/search/'+ busqueda.value;
+  } else {
+    $('#busqueda').focus();
+  }
+});
+
+$(document).on('keypress', '#busqueda', function(event) {
+  if (event.keyCode === 13) {
+    let busqueda = {"value": $('#busqueda').val()};
+    if (busqueda.value)  {
+      window.location.href = '/search/'+ busqueda.value;
+    } else {
+      $('#busqueda').focus();
+    }
+  }
+});
+
+
   // $.ajax({
   //   type: "get",
   //   url: "/search/ajax/" + busqueda.value,
@@ -39,4 +57,3 @@ $(document).on('click', '#search', function(event){
 //       alert("No pudo resolver");
 //     }
 //   });
-});
