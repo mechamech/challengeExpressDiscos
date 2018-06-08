@@ -6,23 +6,26 @@ block content
             #content.two_third
                 .spacer
                     #comments
-                        form#login.formIngreso(action="/ingreso/login", method="POST")   
+                        form#login.formIngreso(action="/ingreso/login" method="POST" autocomplete="off")   
                             h2 Ingrese sus datos
                             label e-mail*    
                             input(type="email" name="email") 
                             label Contraseña*
-                            input(type="password" name="password")
+                            input(type="password" name="password" minlength="8" maxlength="16")
                             button(type="submit") Entrar   
                             a(href="" onclick="ocultarLogin()") Nuevo usuario
                         
-                        form#nuevaCuenta.formIngreso(action="/ingreso/nuevo", method="POST")
+                        form#nuevaCuenta.formIngreso(action="/ingreso/nuevo" method="POST" autocomplete="off")
                             h2 Crear una cuenta   
                             label Nombre*
                             input(type="text" name="nombre")
                             label e-mail*
                             input(type="email" name="email")   
                             label Contraseña*
-                            input(type="password" name="password")  
+                            input(type="password" name="password" minlength="8" maxlength="16")
+                            label Repita la contraseña*
+                            input(type="password" name="passwordRepeat" minlength="8" maxlength="16")    
                             button(type="submit") Entrar
+                            label#lblPassword
                                 
 
