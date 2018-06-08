@@ -1,0 +1,28 @@
+extends layout
+
+block content 
+    .wrapper.row2
+        main#container.clear
+            #content.two_third
+                .spacer
+                    #comments
+                        form#login.formIngreso(action="/ingreso/login", method="POST")   
+                            h2 Ingrese sus datos
+                            label e-mail*    
+                            input(type="email" name="email") 
+                            label Contraseña*
+                            input(type="password" name="password")
+                            button(type="submit") Entrar   
+                            a(href="" onclick="ocultarLogin()") Nuevo usuario
+                        
+                        form#nuevaCuenta.formIngreso(action="/ingreso/nuevo", method="POST")
+                            h2 Crear una cuenta   
+                            label Nombre*
+                            input(type="text" name="nombre")
+                            label e-mail*
+                            input(type="email" name="email")   
+                            label Contraseña*
+                            input(type="password" name="password")  
+                            button(type="submit") Entrar
+                                
+

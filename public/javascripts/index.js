@@ -1,37 +1,35 @@
-$("#btnNuevo").on("click", function(e){
-    var error=false;
-    $('#registro input').css("border","1px solid #979797");
-    if(!$("#nombre").val()){
-        $("#nombre").css("border","1px solid red");
-        error=true;
-    }
-    if(!$("#email").val()){
-        $("#email").css("border","1px solid red");
-        error=true;
-    }
-    if(!$("#password").val()){
-        $("#password").css("border","1px solid red");
-        error=true;
-    }
-    if(error){
+$('#nuevaCuenta').hide();
+
+function ocultarLogin(){
+    $("#login").hide();
+    $("#nuevaCuenta").show();
+};
+
+$("#login a").on("click", function(e){
+    e.preventDefault();
+})
+
+//validacion
+$("form").on("submit", function(e){
+    var incompletos=false;
+    var formId=$(this).attr("id");
+    var inputs=Array.from($("#"+formId+" input"))
+    $(".formIngreso input").css("border","1px solid #979797"); 
+    $(inputs).each(function( index, element ) {
+        if(!element.value){
+            $(element).css("border","1px solid red");
+            incompletos=true;
+        }
+    });
+    if(incompletos){
         return false;
+    }else{
+        $("#linkLogin").text("salir")
     }
 })
 
-$("#btnLogin").on("click", function(e){
-    var error=false;
-    $('#registro input').css("border","1px solid #979797");
-    if(!$("#emailLogin").val()){
-        $("#emailLogin").css("border","1px solid red");
-        error=true;
-    }
-    if(!$("#passwordLogin").val()){
-        $("#passwordLogin").css("border","1px solid red");
-        error=true;
-    }
-    if(error){
-        return false;
-    }
-});
+$(".formIngreso input").on("input", function(){
+    $(this).css("border","1px solid #979797"); 
+})
 
 
