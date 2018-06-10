@@ -18,9 +18,15 @@ const data = require('./data');
 //   }
 // });
 
+function findMatch(words, disc) {
+  const discString = JSON.stringify(disc).toLowerCase();
+  return words.every(word => discString.indexOf(word) >= 0 );
+};
+
 router.get('/:search', function(req, res, next) {
   let inputText = req.params.search;
-  discos = data.discos.filter(disco => JSON.stringify(disco).toLowerCase().indexOf(inputText.toLowerCase()) >= 0);
+  let inputWords = inputText.split(" ");
+  discos = data.discos.filter(disco => findMatch(inputWords, disco));
   if (discos.length) {
     res.render('discos', {...data, discos, titulo: `Tu búsqueda "${inputText}" produjo los siguientes resultados:`, inputText })
   } else {
