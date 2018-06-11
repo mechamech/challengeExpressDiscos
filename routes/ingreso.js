@@ -20,7 +20,7 @@ router.post('/login', function(req, res, next) {
 router.post('/nuevo', function(req, res, next) {
     usuarios.push({nombre: req.body.nombre,email: req.body.email,password:req.body.password});
     // res.redirect('/');
-    res.render('index', {...data, usuario:req.body.nombre});
+    res.render('ingreso', {...data });
 });
 
 module.exports = router;

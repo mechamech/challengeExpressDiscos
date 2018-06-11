@@ -2,11 +2,9 @@ const express = require('express');
 const router = express.Router();
 const data = require('./data');
 
-// router.post('/', function(req, res, next) {
-//   let parametroSearch = req.body.value;
-//   discosRender = discos.filter(disco => JSON.stringify(disco).toLowerCase().indexOf(parametroSearch.toLowerCase()) >= 0)
-//   res.json({data: JSON.stringify(discosRender)})
-// });
+// ----------ALTERNATIVA CON LLAMADA AJAX-----------
+
+//  Esto se corresponde con la llamada Ajax de public/search.js
 
 // router.get('/ajax/:search', function(req, res, next) {
 //   let inputText = req.params.search;
